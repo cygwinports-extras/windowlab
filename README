@@ -1,0 +1,68 @@
+windowlab
+------------------------------------------
+WindowLab is a small and simple window manager of novel design.
+It's click-to-focus, shares its window depth policy with the Amiga, and 
+has a window resizing mechanism that allows one or many edges of a 
+window to be changed in one action. WindowLab maintains the illusion of 
+direct manipulation by constraining the mouse pointer when appropriate. 
+The pointer is also constrained vertically when it's in the menubar to 
+reduce pointing time.
+
+Runtime requirements:
+  cygwin-1.5.18-1
+  libXft2-2.1.6-1
+  xorg-x11-bin-dlls-6.8.2.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.18-1
+  binutils-20050610-1
+  gcc-core-3.4.4-1
+  make-3.80-1
+  pkgconfig-0.17.2-2
+
+Canonical homepage:
+  http://www.nickgravgaard.com/windowlab/
+
+------------------------------------
+
+Build instructions:
+  unpack windowlab-1.33-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  ./windowlab-1.33-1.sh all
+
+This will create:
+  /usr/src/windowlab-1.33-1-src.tar.bz2
+  /usr/src/windowlab-1.33-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /etc/X11/windowlab/windowlab.menurc
+  /usr/bin/windowlab.exe
+  /usr/share/doc/Cygwin/windowlab-1.33.README
+  /usr/share/doc/windowlab-1.33/ChangeLog
+  /usr/share/doc/windowlab-1.33/LICENCE
+  /usr/share/doc/windowlab-1.33/README
+  /usr/share/doc/windowlab-1.33/TODO
+  /usr/share/man/man1/windowlab.1x.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.33-1 -----
+Sync with upstream version.
+
+----- version 1.23-1 -----
+New upstream release.
+
+----- version 1.21-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

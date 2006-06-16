@@ -1,0 +1,10 @@
+category: X11
+requires: cygwin libXft2 xorg-x11-base
+sdesc: "Simple window manager"
+ldesc: "WindowLab is a small and simple window manager of novel design.
+It's click-to-focus, shares its window depth policy with the Amiga, and
+has a window resizing mechanism that allows one or many edges of a
+window to be changed in one action. WindowLab maintains the illusion of
+direct manipulation by constraining the mouse pointer when appropriate.
+The pointer is also constrained vertically when it's in the menubar to
+reduce pointing time."
