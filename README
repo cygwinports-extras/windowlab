@@ -9,33 +9,35 @@ The pointer is also constrained vertically when it's in the menubar to
 reduce pointing time.
 
 Runtime requirements:
-  cygwin-1.5.18-1
-  libXft2-2.1.6-1
-  xorg-x11-bin-dlls-6.8.2.0-1
+  cygwin-1.5.21-2
+  libX11_6-1.0.3-1
+  libXext6-1.0.1-1
+  libXft2-2.1.10-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.18-1
-  binutils-20050610-1
+  cygwin-1.5.21-2
+  binutils-20060817-1
+  cygport-0.2.6-1
   gcc-core-3.4.4-1
-  make-3.80-1
-  pkgconfig-0.17.2-2
+  make-3.81-1
+  pkg-config-0.21-1
 
 Canonical homepage:
   http://www.nickgravgaard.com/windowlab/
 
-------------------------------------
+-------------------------------------------
 
 Build instructions:
-  unpack windowlab-1.33-1-src.tar.bz2
+  unpack windowlab-1.34-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./windowlab-1.33-1.sh all
+  cygport ./windowlab-1.34-X.cygport all
 
 This will create:
-  /usr/src/windowlab-1.33-1-src.tar.bz2
-  /usr/src/windowlab-1.33-1.tar.bz2
+  /usr/src/windowlab-1.34-X-src.tar.bz2
+  /usr/src/windowlab-1.34-X.tar.bz2
 
 -------------------------------------------
 
@@ -54,8 +56,11 @@ Files included in the binary package:
 
 Port Notes:
 
+----- version 1.34-1 -----
+Version bump.
+
 ----- version 1.33-1 -----
-Sync with upstream version.
+Long-overdue version bump.
 
 ----- version 1.23-1 -----
 New upstream release.

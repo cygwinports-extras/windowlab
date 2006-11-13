@@ -1,0 +1,9 @@
+DESCRIPTION="WindowLab X11 window manager"
+HOMEPAGE="http://nickgravgaard.com/windowlab/"
+SRC_URI="${HOMEPAGE}/${P}.tar"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}

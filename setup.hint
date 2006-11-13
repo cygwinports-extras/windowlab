@@ -1,5 +1,5 @@
 category: X11
-requires: cygwin libXft2 xorg-x11-base
+requires: cygwin libX11_6 libXext6 libXft2
 sdesc: "Simple window manager"
 ldesc: "WindowLab is a small and simple window manager of novel design.
 It's click-to-focus, shares its window depth policy with the Amiga, and

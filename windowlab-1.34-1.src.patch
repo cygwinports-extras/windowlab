@@ -1,0 +1,34 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x Makefile.in.in -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x omf.make -x xmldocs.make origsrc/windowlab-1.34/Makefile src/windowlab-1.34/Makefile
+--- origsrc/windowlab-1.34/Makefile	2006-08-13 12:27:52.000000000 -0500
++++ src/windowlab-1.34/Makefile	2006-11-12 21:19:25.102625000 -0600
+@@ -8,7 +8,7 @@
+ PREFIX =
+ 
+ # Set this to the location of the X installation you want to compile against
+-XROOT = /usr/X11R6
++XROOT = /usr
+ 
+ # Set this to the location of the global configuration files
+ SYSCONFDIR = $(PREFIX)/etc/X11/windowlab
+@@ -25,9 +25,9 @@
+ 
+ # Uncomment to add freetype support (requires XFree86 4.0.2 or later)
+ # This needs -lXext above, even if you have disabled shape support
+-#DEFINES += -DXFT
+-#EXTRA_INC += `pkg-config --cflags xft`
+-#EXTRA_LIBS += `pkg-config --libs xft`
++DEFINES += -DXFT
++EXTRA_INC += `pkg-config --cflags xft`
++EXTRA_LIBS += `pkg-config --libs xft`
+ 
+ # Uncomment for debugging info (abandon all hope, ye who enter here)
+ #DEFINES += -DDEBUG
+@@ -40,7 +40,7 @@
+ endif
+ 
+ BINDIR = $(DESTDIR)$(PREFIX)$(XROOT)/bin
+-MANDIR = $(DESTDIR)$(PREFIX)$(XROOT)/man/man1
++MANDIR = $(DESTDIR)$(PREFIX)$(XROOT)/share/man/man1
+ CFGDIR = $(DESTDIR)$(SYSCONFDIR)
+ INCLUDES = -I$(XROOT)/include $(EXTRA_INC)
+ LDPATH = -L$(XROOT)/lib
